@@ -45,8 +45,8 @@ func New(date time.Time) *Mymonent {
 	}
 }
 
-// NewFromUinx use unix time create a  mymoment ref
-func NewFromUinx(unix int64) *Mymonent {
+// NewFromUnix use unix time create a  mymoment ref
+func NewFromUnix(unix int64) *Mymonent {
 	return New(time.Unix(unix, 0))
 }
 
@@ -89,7 +89,7 @@ func (moment *Mymonent) LastDay(day int) *Mymonent {
 }
 
 //Uinx 获取时间戳
-func (moment *Mymonent) Uinx() int64 {
+func (moment *Mymonent) Unix() int64 {
 	return moment.Now.Unix()
 }
 
