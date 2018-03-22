@@ -7,7 +7,6 @@ import (
 )
 
 type Mymonent struct {
-	Unix int64
 	Now  time.Time
 }
 
@@ -33,7 +32,6 @@ func New(date time.Time) *Mymonent {
 	// endWeek := startWeek.AddDate(0, 0, 7).Add(time.Nanosecond * -1)
 
 	return &Mymonent{
-		Unix: now.Unix(),
 		Now:  now,
 		// StartDay:   start,
 		// EndDay:     end,
